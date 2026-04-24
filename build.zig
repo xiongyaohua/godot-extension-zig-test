@@ -41,6 +41,23 @@ pub fn build(b: *std.Build) void {
         .target = target,
     });
 
+    const lib = b.addLibrary(.{
+        .name = "my_extension",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("src/root.zig"),
+            .target = target,
+            .optimize = optimize,
+        }),
+        .linkage = .static,
+    });
+
+    const install_lib = b.addInstallArtifact(lib, .{});
+    b.getInstallStep().dependOn(&install_lib.step);
+
+    // const header = lib.getEmittedH();
+    // const install_header = b.addInstallFile(header, "include/my_extension.h");
+    // b.getInstallStep().dependOn(&install_header.step);
+
     // Here we define an executable. An executable needs to have a root module
     // which needs to expose a `main` function. While we could add a main function
     // to the module defined above, it's sometimes preferable to split business
