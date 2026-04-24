@@ -9,3 +9,7 @@ zig-out
 godot-project/bin
 src/cpp/gen
 src/cpp/*.os
+compile_commands.json
+
+# clangd
+.cache
