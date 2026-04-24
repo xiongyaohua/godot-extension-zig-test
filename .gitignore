@@ -1,2 +1,11 @@
+# Zig
 .zig-cache
 zig-out
+
+# Scons
+.sconsign.dblite
+
+# Godot extension artifacts
+godot-project/bin
+src/cpp/gen
+src/cpp/*.os

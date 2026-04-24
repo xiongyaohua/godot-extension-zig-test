@@ -1,0 +1,15 @@
+[configuration]
+
+entry_symbol = "zig_module_init"
+compatibility_minimum = "4.6"
+
+[libraries]
+
+macos.debug = "res://bin/libgdzig.macos.template_debug.framework"
+macos.release = "res://bin/libgdzig.macos.template_release.framework"
+linux.debug.x86_64 = "res://bin/libgdzig.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://bin/libgdzig.linux.template_release.x86_64.so"
+web.debug.threads.wasm32 = "res://bin/libgdzig.web.template_debug.wasm32.wasm"
+web.release.threads.wasm32 = "res://bin/libgdzig.web.template_release.wasm32.wasm"
+web.debug.wasm32 = "res://bin/libgdzig.web.template_debug.wasm32.nothreads.wasm"
+web.release.wasm32 = "res://bin/libgdzig.web.template_release.wasm32.nothreads.wasm"
