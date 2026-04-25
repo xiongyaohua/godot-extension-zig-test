@@ -1,5 +1,6 @@
 #include "simple.h"
 #include "godot_cpp/core/class_db.hpp"
+#include <cstdint>
 
 void SimpleExtension::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_a"), &SimpleExtension::get_a);
@@ -12,6 +13,11 @@ void SimpleExtension::_bind_methods() {
 	ADD_PROPERTY(PropertyInfo(Variant::INT, "total_value"), "", "get_total");
 }
 
+extern "C" {
+    int32_t add_two(int32_t a, int32_t b);
+}
+
 int32_t SimpleExtension::get_total() const {
-	return a + b;
+    UtilityFunctions::print("Calling Zig!");
+	return add_two(a, b);
 }

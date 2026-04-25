@@ -12,5 +12,6 @@ func _ready() -> void:
 script = SubResource("GDScript_tw61g")
 
 [node name="SimpleExtension" type="SimpleExtension" parent="." unique_id=631940672]
-a_value = 5
-total_value = 10
+a_value = 33
+b_value = 22
+total_value = 55
