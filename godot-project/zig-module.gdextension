@@ -6,6 +6,7 @@ compatibility_minimum = "4.6"
 [libraries]
 
 macos.debug = "res://bin/libgdzig.macos.template_debug.framework"
+macos.debug.editor = "res://bin/libgdzig.macos.editor.framework"
 macos.release = "res://bin/libgdzig.macos.template_release.framework"
 linux.debug.x86_64 = "res://bin/libgdzig.linux.template_debug.x86_64.so"
 linux.debug.x86_64.editor = "res://bin/libgdzig.linux.editor.x86_64.so"
