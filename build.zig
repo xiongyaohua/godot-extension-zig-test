@@ -50,6 +50,7 @@ pub fn build(b: *std.Build) void {
         }),
         .linkage = .static,
     });
+    lib.root_module.pic = true;
 
     const install_lib = b.addInstallArtifact(lib, .{});
     b.getInstallStep().dependOn(&install_lib.step);

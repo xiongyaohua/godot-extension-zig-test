@@ -11,6 +11,8 @@ env = SConscript("godot-cpp/SConstruct")
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/cpp/", "zig-out/include/"])
+env.Append(LINKFLAGS=["-Wl,-z,noexecstack"])
+
 sources = Glob("src/cpp/*.cpp")
 
 if env["platform"] == "windows":
