@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://8hjh1v8jxq54"]
+
+[sub_resource type="GDScript" id="GDScript_tw61g"]
+script/source = "extends Node2D
+
+func _ready() -> void:
+	print(\"The total is:\")
+	print($SimpleExtension.get_total())
+"
+
+[node name="Simple" type="Node2D" unique_id=1100635394]
+script = SubResource("GDScript_tw61g")
+
+[node name="SimpleExtension" type="SimpleExtension" parent="." unique_id=631940672]
+a_value = 5
+total_value = 10

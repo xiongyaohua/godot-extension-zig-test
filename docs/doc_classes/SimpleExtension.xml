@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="SimpleExtension" inherits="Node" api_type="extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		A class that do nothing.
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<members>
+		<member name="a_value" type="int" setter="set_a" getter="get_a" default="3">
+		</member>
+		<member name="b_value" type="int" setter="set_b" getter="get_b" default="5">
+		</member>
+		<member name="total_value" type="int" setter="" getter="get_total" default="8">
+			A total value
+		</member>
+	</members>
+</class>
