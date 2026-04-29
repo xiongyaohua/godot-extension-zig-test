@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 env = SConscript("godot-cpp/SConstruct")
+env = env.Clone()
 
 # For the reference:
 # - CCFLAGS are compilation flags shared between C and C++
