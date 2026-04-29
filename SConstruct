@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import sys
+
 env = SConscript("godot-cpp/SConstruct")
 env = env.Clone()
 
@@ -12,7 +14,10 @@ env = env.Clone()
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/cpp/", "zig-out/include/"])
-env.Append(LINKFLAGS=["-Wl,-z,noexecstack"])
+
+# MacOS disallow execstack by default.
+if sys.platform.startswith("linux"):
+    env.Append(LINKFLAGS=["-Wl,-z,noexecstack"])
 
 sources = Glob("src/cpp/*.cpp")
 
